@@ -7,4 +7,4 @@
 一弩炸天下的主页
 </h1>
 <h3> 
-[关于我](https://service-mcdd.github.io/aboutme.md)
+[关于我](https://service-mcdd.github.io/aboutme.html)
