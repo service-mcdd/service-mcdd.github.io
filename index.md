@@ -36,4 +36,15 @@ function displayDate(){
 <button type="button" onclick="displayDate()">点我！</button>
 
 </body>
-</html>
+
+<script language="javascript"> 
+function custom_close() { 
+if (confirm("您确定要关闭本页吗？")) { 
+window.opener = null; 
+window.open('', '_self'); 
+window.close() 
+} else {} 
+} 
+</script> 
+<input id="btnClose" type="button" value="关闭本页" onClick="custom_close()" 
+/> 
