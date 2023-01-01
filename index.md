@@ -37,6 +37,9 @@ function displayDate(){
 
 </body>
 
+<h1>
+点击关闭网页
+</h1>
 <script language="javascript"> 
 function custom_close() { 
 if (confirm("您确定要关闭本页吗？")) { 
