@@ -28,7 +28,6 @@ function displayDate(){
     document.getElementById("demo").innerHTML=Date();
 }
 </script>
-</head>
 <body>
 
 <h1>当前时间</h1>
