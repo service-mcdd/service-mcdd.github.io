@@ -51,3 +51,5 @@ window.close()
 </script> 
 <input id="btnClose" type="button" value="关闭本页" onClick="custom_close()" 
 /> 
+<img src="https://service-mcdd.github.io/F07DCA93-25F3-4FA3-9775-0E61EFBBB969.png" alt="doge" title="doge" />
+<img src="https://service-mcdd.github.io/EB738A00-1826-492F-BF3F-5EF9EF49BAD9.webp" alt="doge" title="doge" />
