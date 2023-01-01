@@ -22,3 +22,19 @@
 <h3>
 [显示时间](https://service-mcdd.github.io/time.html)
 </h3>
+
+<script>
+function displayDate(){
+    document.getElementById("demo").innerHTML=Date();
+}
+</script>
+</head>
+<body>
+
+<h1>当前时间</h1>
+<p id="demo">点击显示日期</p>
+
+<button type="button" onclick="displayDate()">点我！</button>
+
+</body>
+</html>
