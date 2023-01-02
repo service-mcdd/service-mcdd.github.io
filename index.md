@@ -22,6 +22,9 @@ mcdd最爱的的主页
 <h3>
 [显示时间](https://service-mcdd.github.io/time.html)
 </h3>
+<h3>
+[uuid在线生成](https://service-mcdd.github.io/uuid.html)
+</h3>
 
 <script>
 function displayDate(){
