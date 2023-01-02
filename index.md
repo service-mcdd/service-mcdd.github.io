@@ -60,5 +60,7 @@ bye-bye
 
 <h1>
 由github驱动
+</h1>
+<h1>
 由shundebo提供技术支持 shundebo的网站：br-get.ml
 </h1>  
