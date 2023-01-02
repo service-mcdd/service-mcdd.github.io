@@ -25,7 +25,8 @@ mcdd最爱的的主页
 <h3>
 [uuid在线生成](https://service-mcdd.github.io/uuid.html)
 </h3>
-
+<h3>
+[网页地图](https://service-mcdd.github.io/site_map.html)
 <script>
 function displayDate(){
     document.getElementById("demo").innerHTML=Date();
