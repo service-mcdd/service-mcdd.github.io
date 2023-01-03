@@ -68,3 +68,6 @@ bye-bye
 <h1>
 由shundebo提供技术支持 shundebo的网站：br-get.ml
 </h1>  
+<h1>
+(c)2023 Mc戴戴闯世界
+</h1>
