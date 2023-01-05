@@ -5,7 +5,7 @@
     <link rel="icon" href="assetss/images/logo.png">
   </script>
 <h1>
-mcdd最爱的的主页
+mcdd最爱的主页
 </h1>
 <h3> 
 [关于我](https://service-mcdd.github.io/aboutme.html)
