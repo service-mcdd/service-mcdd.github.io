@@ -65,7 +65,10 @@ window.close()
 </script> 
 <input id="btnClose" type="button" value="关闭本页" onClick="custom_close()" 
 /> 
-  
+<p>
+
+</p> 
+
 <button
   id="ygg-dnd-botton" 
   class="btn btn-primary" 
