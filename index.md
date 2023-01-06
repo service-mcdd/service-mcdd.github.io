@@ -65,6 +65,15 @@ window.close()
 </script> 
 <input id="btnClose" type="button" value="关闭本页" onClick="custom_close()" 
 /> 
+  
+<button
+  id="ygg-dnd-botton" 
+  class="btn btn-primary" 
+  draggable="true" 
+  data-clipboard-text="https://littleskin.cn/api/yggdrasil"
+>
+  将此按钮拖动至我的世界启动器以使用littleskin登陆启动器
+</button>
 
 <h2>
 bye-bye
