@@ -16,7 +16,7 @@ function login() {
  
     } else if(username.value == "administrator" && pass.value == "minecraft666"){
  
-        window.location.href="https://service-mcdd.github.io/Login/welcome.html";
+        top.location="https://service-mcdd.github.io/Login/welcome.html";
  
     } else {
  
