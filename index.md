@@ -7,7 +7,7 @@
 <h1>
 mcdd最爱的主页
 </h1>
-<a href="https://service-mcdd.github.io/Login/login.html" target="_blank">登陆</a>
+<a href="https://service-mcdd.github.io/Login/login.html" target="_blank">登陆mcdd的网站（开发中，可以提个意见）</a>
 <h3> 
 [关于我](https://service-mcdd.github.io/aboutme.html)
 </h3>
