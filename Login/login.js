@@ -4,7 +4,7 @@
 function login() {
  
     var username = document.getElementById("username");
-    var pass = document.getElementById("password");
+    var password = document.getElementById("password");
  
     if (username.value == "") {
  
