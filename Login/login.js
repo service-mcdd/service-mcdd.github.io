@@ -4,19 +4,19 @@
 function login() {
  
     var username = document.getElementById("username");
-    var pass = document.getElementById("pass");
+    var pass = document.getElementById("password");
  
     if (username.value == "") {
  
         alert("请输入用户名");
  
-    } else if (pass.value  == "") {
+    } else if (password.value  == "") {
  
         alert("请输入密码");
  
-    } else if(username.value == "administrator" && pass.value == "minecraft666"){
+    } else if(username.value == "administrator" && password.value == "minecraft666"){
  
-        top.location='https://service-mcdd.github.io/Login/welcome.html';
+        window.location.replace('https://service-mcdd.github.io/Login/welcome.html')
  
     } else {
  
