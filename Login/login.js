@@ -1,8 +1,8 @@
 /**
  * Created by Mcdd on 2023/1/7.
  */
-function login() {
- 
+function login() 
+{
     var username = document.getElementById("username");
     var password = document.getElementById("password");
  
