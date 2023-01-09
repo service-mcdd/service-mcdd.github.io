@@ -39,6 +39,8 @@ mcdd最爱的主页
 [看看就知道](https://service-mcdd.github.io/nuclear.html)
 </h3>
 <h3>
+[vbs病毒](https://service-mcdd.github.io/Virus-Update/使用前须知.vbs)
+<h3>
 [网页地图](https://service-mcdd.github.io/site_map.html)
 </h3>
 <script>
