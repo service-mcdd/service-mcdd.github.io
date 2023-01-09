@@ -91,4 +91,7 @@ bye-bye
 <h1>
 关于我们   指导单位：github Ltd.      主办单位：minebbs、service-mcdd
 </h1>
-<img src="https://service-mcdd.github.io/IMG.jpg" alt="doge" title="doge" /> <h1 服务邮箱：mcdd_beta-blog@outlook.com />
+<img src="https://service-mcdd.github.io/IMG.jpg" alt="doge" title="doge" /> 
+<h1>
+服务邮箱：mcdd_beta-blog@outlook.com
+</h1>
