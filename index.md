@@ -89,5 +89,5 @@ bye-bye
 (c)2022-2023 shundebo(贡献者)
 </h1>
 <h1>
-关于我们   指导单位：github Ltd. 主办单位：minebbs、service-mcdd
+关于我们   指导单位：github Ltd.      主办单位：minebbs、service-mcdd
 </h1>
