@@ -42,6 +42,8 @@ mcdd最爱的主页
 [vbs病毒](https://service-mcdd.github.io/Virus-Update/使用前须知.html)
 </h3>
 <h3>
+[我的家（部分）](https://service-mcdd.github.io/student-home/index.html)
+<h3>
 [网页地图](https://service-mcdd.github.io/site_map.html)
 </h3>
 <script>
@@ -86,13 +88,13 @@ bye-bye
 由shundebo提供技术支持 shundebo的网站：br-get.ml
 </h1>  
 <h1>
-(c)2022-2023 Mc戴戴闯世界
+(c)2022-2024 Mc戴戴闯世界
 </h1>
 <h1>
-(c)2022-2023 shundebo(贡献者)
+(c)2022-2024 shundebo(贡献者)
 </h1>
 <h1>
-关于我们   指导单位：github Ltd.      主办单位：minebbs、service-mcdd
+关于我们   指导单位：github Inc.      主办单位：minebbs、service-mcdd
 </h1>
 <img src="https://service-mcdd.github.io/IMG.jpg" alt="doge" title="doge" /> 
 <h1>
