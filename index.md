@@ -2,7 +2,7 @@
   <title>mcdd的主页</title>
 <script>
     document.title = 'bomb！mcdd！'
-    <link rel="icon" href="assetss/images/logo.png">
+    <link rel="icon" href="assetss/images/logo.jpg">
   </script>
 <h1>
 mcdd最爱的主页
