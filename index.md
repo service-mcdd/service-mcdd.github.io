@@ -43,6 +43,10 @@ mcdd最爱的主页
 </h3>
 <h3>
 [我的家（部分）](https://service-mcdd.github.io/student-home/index.html)
+</h3>
+<h3>
+[psp模拟器下载](https://service-mcdd.github.io/psp.html)
+</h3>
 <h3>
 [网页地图](https://service-mcdd.github.io/site_map.html)
 </h3>
