@@ -8,6 +8,7 @@
 mcdd最爱的主页
 </h1>
 <a href="https://service-mcdd.github.io/logintosite/login.html" target="_blank">登陆mcdd的网站（目前可正常使用）</a>
+<a href="https://service-mcdd.github.io/flybook.html" target="_blank">加入飞书企业</a>
 <h3> 
 [关于我](https://service-mcdd.github.io/aboutme.html)
 </h3>
