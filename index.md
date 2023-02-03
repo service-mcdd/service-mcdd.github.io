@@ -11,6 +11,9 @@ mcdd最爱的主页
 <p>
 </p> 
 <a href="https://service-mcdd.github.io/flybook.html" target="_blank">加入飞书企业</a>
+<p>
+</p>
+<a href="#email">查看邮箱</a>
 <h3> 
 [关于我](https://service-mcdd.github.io/aboutme.html)
 </h3>
@@ -107,5 +110,5 @@ bye-bye
 </h1>
 <img src="https://service-mcdd.github.io/IMG.jpg" alt="doge" title="doge" /> 
 <h1>
-服务邮箱：mcdd_beta-blog@outlook.com
+<a name="email">服务邮箱：mcdd_beta-blog@outlook.com</a>
 </h1>
