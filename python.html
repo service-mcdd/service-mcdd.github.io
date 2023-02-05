@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Python在线编程</title>
+
+    <link rel="stylesheet" href="https://www.sciclass.cn/revision/js/codemirror/lib/codemirror.css"  >
+    <link rel="stylesheet" href="https://www.sciclass.cn/revision/js/codemirror/addon/fold/foldgutter.css" >
+    <link rel="stylesheet" href="https://www.sciclass.cn/revision/js/codemirror/addon/hint/show-hint.css" >
+    <link rel="stylesheet" href="https://www.sciclass.cn/revision/js/codemirror/addon/lint/lint.css" >
+    <link rel="stylesheet" href="https://www.sciclass.cn/revision/js/codemirror/theme/cobalt.css" >
+<!--    <link rel="stylesheet" href="https://www.sciclass.cn/revision/layui/css/layui.css">-->
+<!--    <link rel="stylesheet" href="https://www.sciclass.cn/revision/css/layer.css">-->
+    <link rel="stylesheet" href="https://www.sciclass.cn/revision/css/editor.css">
+    <script src="https://www.sciclass.cn/revision/js/skulpt/jquery.min.js"></script>
+    <script src = "https://www.sciclass.cn/revision/layer/layer.js"></script>
+<!--<script src = https://www.sciclass.cn/revision/layui/layui.js"></script>-->
+    <script id="test" src="https://www.sciclass.cn/revision/js/promise.js"></script>
+    <script type="text/javascript" src="https://www.sciclass.cn/revision/js/skulpt/dist/skulpt.min.js"></script>
+    <script type="text/javascript" src="https://www.sciclass.cn/revision/js/skulpt/dist/skulpt-stdlib.js"></script>
+    <script src="https://www.sciclass.cn/revision/js/codemirror/lib/codemirror.js"></script>
+    <script src="https://www.sciclass.cn/revision/js/codemirror/addon/comment/comment.js"></script>
+    <script src="https://www.sciclass.cn/revision/js/codemirror/addon/selection/active-line.js"></script>
+    <script src="https://www.sciclass.cn/revision/js/codemirror/keymap/sublime.js"></script>
+    <script src="https://www.sciclass.cn/revision/js/codemirror/addon/hint/show-hint.js"></script>
+    <script src="https://www.sciclass.cn/revision/js/codemirror/mode/python/python.js"></script>
+    <script src="https://www.sciclass.cn/revision/js/codemirror/addon/fold/foldcode.js"></script>
+    <script src="https://www.sciclass.cn/revision/js/codemirror/addon/fold/foldgutter.js"></script>
+    <script src="https://www.sciclass.cn/revision/js/codemirror/addon/fold/brace-fold.js"></script>
+    <script src="https://www.sciclass.cn/revision/js/codemirror/addon/fold/indent-fold.js"></script>
+    <script src="https://www.sciclass.cn/revision/js/codemirror/addon/fold/comment-fold.js"></script>
+    <script src="https://www.sciclass.cn/revision/js/codemirror/addon/edit/closebrackets.js"></script>
+    <script src="https://www.sciclass.cn/revision/js/codemirror/addon/edit/matchbrackets.js"></script>
+    <script src="https://www.sciclass.cn/revision/js/jszip.min.js"></script>
+    <script src="https://www.sciclass.cn/revision/js/FileSaver.js"></script>
+    
+    <script>
+        var home_ucenter_site = "http://ucenter.sciclass.cn";
+    </script>
+    <script src = "https://www.sciclass.cn/revision/js/config.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="logo">
+        <span>在线编程PYTHON(不支持多文件)</span>
+    </div>
+</div>
+<section>
+    <div class="main">
+        <!-- ct-box -->
+        <div class="ct-box"  style="width:66%;min-width:800px;">
+            <div id="lResize"></div>
+            <div id="rResize"></div>
+            <div class="ct-head">
+                <span class="page active">
+                    <span>default.py</span>
+                    <img src="https://www.sciclass.cn/revision/images/setting.png" alt="">
+                </span>
+            </div>
+            <div>
+                <!-- 编辑器 -->
+                <div class="ct-body">
+                    <div class="main-body"  style="padding-right:10px;">
+                        <div class="pyEditor">
+                            <textarea id="yourcode" cols="80" rows="10"></textarea>
+                        </div>
+                        <div class="tip-text" style="display: none;">
+                            <span>保存成功！系统仅保存最后一次提交的代码。</span>
+                            <span onclick="close()"><img src="https://www.sciclass.cn/revision/images/X.png" alt=""></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ct-foot">
+
+                                    </div>
+            </div>
+        </div>
+
+        <!-- rt-box -->
+        <div class="rt-box" style="width:34%;min-width:400px;">
+            <div class="result">
+                <div class="head">
+                    <span>运行结果</span>
+                    <div class="btn-box">
+                        <button class="run start">运行</button>
+                        <button class="clear" onclick="reset()">清除</button>
+                    </div>
+                </div>
+                <div>
+                    <pre id="output" style="font-size: 18px;"></pre>
+                </div>
+            </div>
+            <div class="haigui">
+                <div class="head">
+                    <span>海龟图</span>
+                    <div>
+                        <button class="fullScreen">全屏</button>
+                        <button class="narrow">收起</button>
+                    </div>
+                </div>
+                <div class="hg-body">
+                    <div id="mycanvas"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<input type="hidden" id="history" value="">
+<input type="hidden" id="isLogin" value="0">
+</body>
+<script src="https://www.sciclass.cn/revision/js/python/editor.js"></script>
+<script src="https://www.sciclass.cn/revision/js/python/python.js"></script>
+</html>
+
+
+
+ 
