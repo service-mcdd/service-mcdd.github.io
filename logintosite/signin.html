@@ -1,0 +1,119 @@
+
+<head><style>
+table {
+	width: 800px;
+	height: 400px;
+	background-color: #d0d0d0;
+}
+ 
+form{
+	width: 800px;
+	height: 500px;
+	background-color: #ffffff;
+	margin: 100px auto 0;
+	font-weight: bold;
+}
+ 
+h1{
+	font-size: 50px;
+	font-family:  STSong;
+	color: blue;
+	text-align: center;
+}
+td{
+	width: 90px;
+}
+ 
+.td-right {
+	text-align: right;
+}
+ 
+.td-button {
+	text-align: center;
+}
+</style>
+
+<script type="text/javascript"> 
+function checkUname() {
+	var uname = document.getElementById("uname").value;
+	var reg = /^[\u4e00-\u9fa5]{2,4}$/
+	var unameSpan = document.getElementById("unameSpan");
+	if (uname == "" || uname == null) {
+		unameSpan.innerHTML = "*用户名不能为空";
+		unameSpan.style.color = "red";
+		return false;
+	} else if (reg.test(uname)) {
+		unameSpan.innerHTML = "*用户名通过";
+		unameSpan.style.color = "green";
+		return true;
+	} else {
+		unameSpan.innerHTML = "*用户名格式不符"
+		unameSpan.style.color = "red";
+		return false;
+	}
+ 
+}
+function checkPwd() {
+	var upwd = document.getElementById("pwd").value;
+	var reg = /^[a-z]\w{5,7}$/;
+	var span = document.getElementById("pwdSpan");
+	if (span == "" || span == null) {
+		span.innerHTML = "*密码不能为空";
+		span.style.color = "red";
+		return false;
+	} else if (reg.test(upwd)) {
+		span.innerHTML = "*密码通过";
+		span.style.color = "green";
+		return true;
+	} else {
+		span.innerHTML = "*密码格式不符"
+		span.style.color = "red";
+		return false;
+	}
+}
+
+function checkAll() {
+	checkUname();
+	checkPwd()
+	return checkUname() && checkPwd();
+}
+</script>
+
+
+
+	
+		<meta charset="utf-8">
+		<title>登录系统</title>
+		<link rel="stylesheet" href="student.css">
+		
+
+	</head>
+	<body>
+		<form action="https://service-mcdd.github.io/Login/welcome.html" onsubmit="return checkAll();">
+			<h1>登录系统</h1>
+			<table border="1">
+				<tbody>
+				</tr>
+				<tr>
+					<td class="td-right">用户名</td>
+					<td>
+						<input type="text" name="uname" id="uname" onblur="checkUname()">
+						<span id="unameSpan">账户名</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="td-right">密码</td>
+					<td>
+						<input type="password" name="pwd" id="pwd" onblur="checkPwd()">
+						<span id="pwdSpan">账户密码</span>
+				</tr>
+				<tr>
+					<td class="td-button" colspan="2">
+						<input type="submit" value="登陆">
+						<input type="reset" value="重置">
+					</td>
+				</tr>
+			</tbody></table>
+		</form>
+
+</body>
