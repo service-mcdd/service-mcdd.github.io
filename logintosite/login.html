@@ -1,27 +1,208 @@
-<form action="https://service-mcdd.github.io/logintosite/verify.html"  autocomplete="on" >
+<style>
+table {
+	width: 800px;
+	height: 400px;
+	background-color: #d0d0d0;
+}
+ 
+form{
+	width: 800px;
+	height: 500px;
+	background-color: #ffffff;
+	margin: 100px auto 0;
+	font-weight: bold;
+}
+ 
+h1{
+	font-size: 50px;
+	font-family:  STSong;
+	color: blue;
+	text-align: center;
+}
+td{
+	width: 90px;
+}
+ 
+.td-right {
+	text-align: right;
+}
+ 
+.td-button {
+	text-align: center;
+}
+</style>
 
-邮箱:<br>
+<script type="text/javascript"> 
+function checkUname() {
+	var uname = document.getElementById("uname").value;
+	var reg = /^[\u4e00-\u9fa5]{2,4}$/
+	var unameSpan = document.getElementById("unameSpan");
+	if (uname == "" || uname == null) {
+		unameSpan.innerHTML = "*用户名不能为空";
+		unameSpan.style.color = "red";
+		return false;
+	} else if (reg.test(uname)) {
+		unameSpan.innerHTML = "*用户名通过";
+		unameSpan.style.color = "green";
+		return true;
+	} else {
+		unameSpan.innerHTML = "*用户名格式不符"
+		unameSpan.style.color = "red";
+		return false;
+	}
+ 
+}
+function checkPwd() {
+	var upwd = document.getElementById("pwd").value;
+	var reg = /^[a-z]\w{5,7}$/;
+	var span = document.getElementById("pwdSpan");
+	if (span == "" || span == null) {
+		span.innerHTML = "*密码不能为空";
+		span.style.color = "red";
+		return false;
+	} else if (reg.test(upwd)) {
+		span.innerHTML = "*密码通过";
+		span.style.color = "green";
+		return true;
+	} else {
+		span.innerHTML = "*密码格式不符"
+		span.style.color = "red";
+		return false;
+	}
+	checkPwd2();
+}
+function checkPwd2() {
+	var pwd = document.getElementById("pwd").value;
+	var pwd2 = document.getElementById("pwd2").value;
+	var span = document.getElementById("pwd2Span");
+	if (pwd2 == "" || pwd2 == null) {
+		span.innerHTML = "*密码不能为空";
+		span.style.color = "red";
+		return false;
+	} else if (pwd === pwd2) {
+		span.innerHTML = "*密码通过";
+		span.style.color = "green";
+		return true;
+	} else {
+		span.innerHTML = "*密码不同，请重新输入"
+		span.style.color = "redredred";
+		return false;
+	}
+}
+function checkbir_date() {
+	var sel = document.getElementById("bir_date").value;
+	var span = document.getElementById("bir_dateSpan");
+	if (sel != 0) {
+		span.innerHTML = "出生日期选择成功";
+		span.style.color = "green";
+		return true;
+	} else {
+		span.innerHTML = "请选择出生日期";
+		span.style.color = "redred";
+		return false;
+	}
+}
+function checkLike() {
+	var Likes = document.getElementsByName("Like");
+	var span = document.getElementById("LikeSpan");
+	for (var i = 0; i < Likes.length; i++) {
+		if (Likes[i].checked) {
+			span.innerHTML = "*爱好通过";
+			span.style.color = "green";
+			return true;
+		}
+	}
+	span.innerHTML = "*爱好至少选择一项";
+	span.style.color = "red";
+	return false;
+}
+function checkAll() {
+	checkUname();
+	checkPwd();
+	checkPwd2();
+	checkLike()
+	return checkUname() && checkPwd() && checkPwd2() && checkLike();
+}
+</script>
 
-<input type="text" name="邮箱" id="email">
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="student.css">
+		<script type="text/javascript" src="student.js"></script>
+	</head>
+	<body>
+		<form action="https://service-mcdd.github.io/Login/welcome.html" onsubmit="return checkAll();">
+			<h1>注册系统</h1>
+			<table border="1">
+				<tr>
+					<td class="td-right">用户选择</td>
+					<td>
+						<input type="radio" name="radio">我是认识站长的人
+						<input type="radio" name="radio">我是普通用户
+						<input type="radio" name="radio">我是贡献者
+					</td>
+				</tr>
+				<tr>
+					<td class="td-right">用户名</td>
+					<td>
+						<input type="text" name="uname" id="uname" onblur="checkUname()">
+						<span id="unameSpan">请输入2-4位汉字</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="td-right">密码</td>
+					<td>
+						<input type="password" name="pwd" id="pwd" onblur="checkPwd()">
+						<span id="pwdSpan">要求6-8位密码，首位必须为字母，小写，小写，小写！字母</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="td-right">重新输入密码</td>
+					<td>
+						<input type="password" name="pwd2" id="pwd2" value="" " onblur=" checkPwd2()">
+						<span id="pwd2Span"></span>
+					</td>
+				</tr>
+				<tr>
+					<td class="td-right">出生日期</td>
+					<td>
+						<select name="bir_date" id="bir_date" onchange="checkbir_date()">
+							<option value="0" selected="selected">选择</option>
+							<option value="1">8～10岁</option>
+							<option value="2">10～20岁</option>
+							<option value="3">20～30岁</option>
+							<option value="4">40～50岁</option>
+							<option value="5">50～60岁或其他</option>
+						</select>年
+						<span id="bir_dateSpan"></span>
+					</td>
+				</tr>
+				<tr>
+					<td class="td-right">兴趣</td>
+					<td>
+						<input type="checkbox" name="Like" id="Like" onclick="checkLike()">音乐
+						<input type="checkbox" name="Like" id="Like" onclick="checkLike()">动漫
+						<input type="checkbox" name="Like" id="Like" onclick="checkLike()">电影
+						<span id="LikeSpan"></span>
+					</td>
+				</tr>
+				<tr>
+					<td class="td-right">我的简介</td>
+					<td>
+						<textarea cols="30" rows="12"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td class="td-button" colspan="2">
+						<input type="submit" value="注册">
+						<input type="reset" value="重置">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
 
-<br>
-
-用户名:<br>
-
-<input type="text" name="用户名" id="fname">
-
-<br>
-
-密码:<br>
-
-<input type="text" name="密码" id="password">
-
-<br><br>
-
-<input type="submit" value="登录/注册">
-
-</form> 
-
-
-
-<p>如果你登录/注册，我们欢迎您。</p>
