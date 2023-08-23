@@ -67,11 +67,7 @@ mcdd最爱的主页
 [psp模拟器下载](https://service-mcdd.github.io/psp.html)
 </h3>
 <h3>
-[pojavLauncher](https://service-mcdd.github.io/minecraft.html)
-<h3>
-[网页地图](https://service-mcdd.github.io/site_map.html)
-</h3>
-<script>
+[pojavLauncher](https://service-mcdd.github.io/minecraft.html)<script>
 function displayDate(){
     document.getElementById("demo").innerHTML=Date();
 }
