@@ -26,6 +26,8 @@ mcdd最爱的主页
 <a href="https://service-mcdd.github.io/Virus-Update/使用前须知.html" target="_blank">vbs病毒</a>
 <a href="https://service-mcdd.github.io/psp.html" target="_blank">psp模拟器下载</a>
 <a href="https://service-mcdd.github.io/minecraft.html" target="_blank">pojavLauncher</a>
+<a href="https://service-mcdd.github.io/minecraft-blog/release.html
+" target="_blank">我的世界图文</a>
 <a href="https://service-mcdd.github.io/" target="_blank">首页</a>
 
 <h3> 
