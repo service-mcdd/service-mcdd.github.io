@@ -47,9 +47,6 @@ mcdd最爱的主页
 [vbs病毒](https://service-mcdd.github.io/Virus-Update/使用前须知.html)
 </h3>
 <h3>
-[我的家（部分）](https://service-mcdd.github.io/student-home/index.html)
-</h3>
-<h3>
 [psp模拟器下载](https://service-mcdd.github.io/psp.html)
 </h3>
 <h3>
