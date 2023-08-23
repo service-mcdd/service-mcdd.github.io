@@ -26,8 +26,7 @@ mcdd最爱的主页
 <a href="https://service-mcdd.github.io/Virus-Update/使用前须知.html" target="_blank">vbs病毒</a>
 <a href="https://service-mcdd.github.io/psp.html" target="_blank">psp模拟器下载</a>
 <a href="https://service-mcdd.github.io/minecraft.html" target="_blank">pojavLauncher</a>
-<a href="https://service-mcdd.github.io/minecraft-blog/release.html
-" target="_blank">我的世界图文</a>
+<a href="https://service-mcdd.github.io/minecraft-blog/release.html" target="_blank">我的世界图文</a>
 <a href="https://service-mcdd.github.io/" target="_blank">首页</a>
 
 <h3> 
@@ -67,7 +66,12 @@ mcdd最爱的主页
 [psp模拟器下载](https://service-mcdd.github.io/psp.html)
 </h3>
 <h3>
-[pojavLauncher](https://service-mcdd.github.io/minecraft.html)<script>
+[pojavLauncher](https://service-mcdd.github.io/minecraft.html)
+</h3>
+<h3>
+[我的世界图文](https://service-mcdd.github.io/minecraft-blog/release.html)
+</h3>
+<script>
 function displayDate(){
     document.getElementById("demo").innerHTML=Date();
 }
