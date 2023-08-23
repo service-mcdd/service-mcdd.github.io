@@ -1,7 +1,6 @@
 <html>
   <title>mcdd的主页</title>
 <script>
-    document.title = 'bomb！mcdd！'
     <link rel="icon" id="favicon" href="https://s1.ax1x.com/2023/02/22/pSvddFx.jpg" type="image/x-icon">
   </script>
 <h1>
