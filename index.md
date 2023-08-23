@@ -13,6 +13,22 @@ mcdd最爱的主页
 <p>
 </p>
 <a href="#email">查看邮箱</a>
+
+<a href="https://service-mcdd.github.io/aboutme.html" target="_blank">关于我</a>
+<a href="service-mcdd.github.io/lyb-test/index.html" target="_blank">留言板</a>
+<a href="https://service-mcdd.github.io/cps-tester/cps.html" target="_blank">cps测试</a>
+<a href="https://service-mcdd.github.io/otherhtml/index.html" target="_blank">跨年快乐</a>
+<a href="https://service-mcdd.github.io/time.html" target="_blank">时间</a>
+<a href="https://service-mcdd.github.io/uuid.html" target="_blank">uuid在线生成</a>
+<a href="https://service-mcdd.github.io/penguin/index.html" target="_blank">新概念音游  原作者：br-get</a>
+<a href="https://service-mcdd.github.io/blog/index.html" target="_blank">blog</a>
+<a href="https://service-mcdd.github.io/minecraft_thearead/index.html" target="_blank">MineCraft互通板块</a>
+<a href="https://service-mcdd.github.io/nuclear.html" target="_blank">看看就知道</a>
+<a href="https://service-mcdd.github.io/Virus-Update/使用前须知.html" target="_blank">vbs病毒</a>
+<a href="https://service-mcdd.github.io/psp.html" target="_blank">psp模拟器下载</a>
+<a href="https://service-mcdd.github.io/minecraft.html" target="_blank">pojavLauncher</a>
+<a href="https://service-mcdd.github.io/" target="_blank">首页</a>
+
 <h3> 
 [关于我](https://service-mcdd.github.io/aboutme.html)
 </h3>
