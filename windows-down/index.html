@@ -1,4 +1,4 @@
-<title>mcdd的主页</title>
+<title>原版微软镜像下载</title>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +31,7 @@
 
     <div id="products-list">
         <h2>Select product</h2>
-        <input id="search-products" type="search" placeholder="Search with regex..." onInput="updateResults();">
+        <input id="search-products" type="search" placeholder="搜索..." onInput="updateResults();">
         <div id="quick-search">
             📌
             <button onClick="setSearch('Windows 8\\.1');">Windows 8.1</button>
@@ -52,19 +52,18 @@
     <div id="msdl-ms-content"></div>
 
     <div id="msdl-please-wait">
-        <h2>Please wait...</h2>
-        <p>Please wait while the data you requested is being retrieved.</p>
+        <h2>稍等...</h2>
+        <p>请等待网站检查库存</p>
     </div>
 
     <div id="msdl-processing-error">
-        <h2>Error</h2>
-        <p>An error has occurred while processing your request. If reloading the page does not work, <a
-                href="https://massgrave.dev/contactus.html">contact us</a> or create an issue on GitHub.</p>
+        <h2>错误！</h2>
+        <p>一个奇怪的错误导致网页错误，不过你能<a href="/help.html">联系我们</a>或者在我的网页上创建一个评论</p>
     </div>
 
     <div id="back-to-products">
         <hr>
-        <button onClick="backToProducts();">Go back to the product list</button>
+        <button onClick="backToProducts();">回到所有windows系统的选择界面</button>
     </div>
 
     <input id="msdl-session-id" type="hidden">
