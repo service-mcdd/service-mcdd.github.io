@@ -3,16 +3,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="description"
-        content="在这里，你可以下载原版官方的微软镜像.">
+        content="在这里，你可以下载原版官方的微软镜像">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="og:site_name" content="微软官方镜像下载">
     <meta property="og:title" content="Microsoft Software Download Listing">
     <meta property="og:type" content="website">
     <meta property="og:description"
-        content="Microsoft Software Download Listing lets you browse and download products from Microsoft Software Download.">
-    <meta property="og:image" content="https://ave9858.github.io/msdl/img/cover.png">
-    <meta property="og:url" content="https://ave9858.github.io/msdl/">
+        content="在这里，你可以下载原版官方的微软镜像">
+    <meta property="og:image" content="/img/cover.png">
+    <meta property="og:url" content="/msdl/">
 
     <title>Microsoft Software Download Listing</title>
 
@@ -24,3 +24,50 @@
 <a href="https://github.com/service-mcdd/service-mcdd.github.io/">
 <b>来看看我的源代码</b>
 </a>
+
+    <noscript>
+        <p>你的网页是不支持java script的！！！</p>
+    </noscript>
+
+    <div id="products-list">
+        <h2>Select product</h2>
+        <input id="search-products" type="search" placeholder="Search with regex..." onInput="updateResults();">
+        <div id="quick-search">
+            📌
+            <button onClick="setSearch('Windows 8\\.1');">Windows 8.1</button>
+            <button onClick="setSearch('Windows 10 22H2');">Latest Windows 10</button>
+            <button onClick="setSearch('Windows 11 22H2');">Latest Windows 11</button>
+        </div>
+        <table style="table-layout: auto;">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>ID</th>
+                </tr>
+            </thead>
+            <tbody id="products-table-body"></tbody>
+        </table>
+    </div>
+
+    <div id="msdl-ms-content"></div>
+
+    <div id="msdl-please-wait">
+        <h2>Please wait...</h2>
+        <p>Please wait while the data you requested is being retrieved.</p>
+    </div>
+
+    <div id="msdl-processing-error">
+        <h2>Error</h2>
+        <p>An error has occurred while processing your request. If reloading the page does not work, <a
+                href="https://massgrave.dev/contactus.html">contact us</a> or create an issue on GitHub.</p>
+    </div>
+
+    <div id="back-to-products">
+        <hr>
+        <button onClick="backToProducts();">Go back to the product list</button>
+    </div>
+
+    <input id="msdl-session-id" type="hidden">
+</body>
+
+</html>
