@@ -1,0 +1,141 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drag</title>
+    <style>
+        /* 外部放置滑动区域 */
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+ 
+        /* 滑动区域 */
+        .drag-verify-band {
+            background: #f4f7f8;
+            width: 300px;
+            height: 40px;
+            border-radius: 12px;
+            position: relative;
+            box-shadow: 0 10px 20px -10px #ccc;
+            transform: translateY(-3px);
+        }
+ 
+        /* 滑块 */
+        .verify-btn {
+            transition: background-color 0.2s;
+            user-select: none;
+            cursor: all-scroll;
+            background-color: #1a5cff;
+            color: #fff;
+            border-radius: 12px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            font-size: 12px;
+        }
+ 
+        /* 滑块内容文本 */
+        .verify-btn-text {
+            margin: 0 10px;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+ 
+<body>
+    <div class="container">
+        <!-- 滑动区域 -->
+        <div class="drag-verify-band">
+            <!-- 滑块 -->
+            <div class="verify-btn">
+                <!-- 滑块内文本 -->
+                <div class="verify-btn-text">向右滑动解锁👉</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // 获取可滑动区域
+        const verifyBand = document.querySelector(".drag-verify-band")
+        // 获取滑块区域宽度、偏移位置
+        const { offsetWidth: bandWidth, offsetLeft: bandLeft } = verifyBand
+        // 获取滑块
+        const verifyBtn = document.querySelector(".verify-btn");
+        // 获取滑块宽度
+        const { offsetWidth: btnWidtn } = verifyBtn
+        // 给滑块绑定鼠标按下事件
+        verifyBtn.addEventListener('mousedown', function (btnMouseDownEvent) {
+            // 获取当前鼠标点击时相对于父节点x坐标，点击滑块越右，偏移量越大
+            let { layerX: mouseOffsetX } = btnMouseDownEvent
+            // 定义是否滑动到最右的标识
+            let isMostRight = false
+            // 定义移动函数
+            function mousemove(e) {
+                // 获取当前鼠标移动时，相对于视窗最左侧的x坐标
+                const { clientX } = e
+                // 鼠标相对视窗最左侧的x坐标，需要减去 滑块外部滑动区域的x坐标，再减去 鼠标按下的x偏移量，得到当前需要移动的距离
+                let safeX = clientX - bandLeft - mouseOffsetX
+                // 移动距离不能小于0(不能超出最左边)
+                safeX = Math.max(safeX, 0)
+                // 移动距离不能大于 滑块的宽度减去按钮的宽度(不能超出最右边)
+                const maxOffsetX = bandWidth - btnWidtn
+                safeX = Math.min(safeX, maxOffsetX);
+                // 记录一下是否滑动到了最右边
+                isMostRight = safeX === maxOffsetX
+                // 日志一下
+                // console.log({ safeX });
+                // 将滑块样式的left设置为当前移动的距离
+                verifyBtn.style.left = `${safeX}px`;
+            }
+ 
+            // 抬起鼠标事件
+            function mouseup(e) {
+                // 判断当前滑块是否滑到最右边
+                console.log({ isMostRight });
+                if (isMostRight) {
+                    // 成功验证逻辑
+                    // 此处可以改为你自定义逻辑
+                    console.log('验证成功');
+                    // 这里首先替换了按钮内的文本
+                    verifyBtn.innerHTML = `<div class="verify-btn-text">验证成功，恭喜你</div>`
+                    // 将坐标位置设为最右边
+                    verifyBtn.style.left = 'initial';
+                    verifyBtn.style.right = 0;
+                    // 按钮背景颜色更改
+                    verifyBtn.style.backgroundColor = '#46c93a';
+ 
+                    // 2s后重置一下
+                    setTimeout(() => {
+                        verifyBtn.innerHTML = `<div class="verify-btn-text">向右滑动解锁</div>`
+                        verifyBtn.style.backgroundColor = '#1a5cff';
+                        verifyBtn.style.right = 'initial';
+                        verifyBtn.style.left = 0
+                    }, 2000)
+                } else {
+                    // 失败逻辑，重置滑块位置
+                    verifyBtn.style.left = 0;
+                }
+ 
+                // 销毁事件监听
+                document.removeEventListener('mousemove', mousemove);
+                document.removeEventListener('mouseup', mouseup);
+            }
+ 
+            // 给全局dom节点绑定鼠标移动事件
+            document.addEventListener('mousemove', mousemove)
+            // 给全局dom节点绑定鼠标抬起事件
+            document.addEventListener('mouseup', mouseup)
+        })
+    </script>
+</body>
+ 
+</html>
